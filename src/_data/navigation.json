@@ -1,0 +1,13 @@
+[
+  { "title": "Home", "url": "/" },
+  { "title": "About the UAS Team", "url": "/about/" },
+  { "title": "Unmanned Aircraft", "url": "/unmanned-aircraft/" },
+  { "title": "Operator Guidance", "url": "/operator-guidance/" },
+  { "title": "Remote Pilot Guidance", "url": "/remote-pilot-guidance/" },
+  { "title": "Aircraft Registration", "url": "/aircraft-registration/" },
+  { "title": "Operational Authorisations", "url": "/operational-authorisations/" },
+  { "title": "Safety Notices", "url": "/safety-notices/" },
+  { "title": "Airspace & Restricted Areas", "url": "/airspace-restricted-areas/" },
+  { "title": "News / Updates", "url": "/news/" },
+  { "title": "Contact", "url": "/contact/" }
+]

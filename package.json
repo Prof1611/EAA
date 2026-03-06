@@ -1,0 +1,17 @@
+{
+  "name": "eaa-uas-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Endonian Aviation Authority UAS Team public information website built with Eleventy.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

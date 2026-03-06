@@ -1,0 +1,66 @@
+---
+layout: layouts/base.njk
+title: Home
+description: Endonian Aviation Authority UAS Team public guidance and notices.
+---
+<section class="notice-banner container" role="status">
+  <strong>Public notice:</strong> Seasonal wildfire restrictions apply in designated upland areas from 01 June to 30 September.
+</section>
+<section class="hero">
+  <div class="container">
+    <h1>Endonian Aviation Authority<br>Unmanned Aircraft Systems Team</h1>
+    <p>We regulate unmanned aircraft operations across Endo to protect people, property and manned aviation. Find clear public guidance, current notices and upcoming digital services.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="/unmanned-aircraft/">Explore UAS Services</a>
+      <a class="btn btn-secondary" href="/safety-notices/">View Safety Notices</a>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h2>Key services</h2>
+    <div class="grid grid-3">
+      <article class="card"><h3>Operator Guidance</h3><p>Understand responsibilities for recreational and commercial activity.</p><a href="/operator-guidance/">Read guidance</a></article>
+      <article class="card"><h3>Remote Pilot Guidance</h3><p>Learn about competency, training and recency expectations.</p><a href="/remote-pilot-guidance/">Pilot requirements</a></article>
+      <article class="card"><h3>Aircraft Registration</h3><p>Prepare for the Endonian UAS registration framework and services.</p><a href="/aircraft-registration/">Registration information</a></article>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container grid grid-3">
+    <div class="card">
+      <h2>Latest notices</h2>
+      <ul class="list-clean">
+        {% for item in collections.notices | slice(0,3) %}
+        <li><a href="{{ item.url }}">{{ item.data.title }}</a><br><small>{{ item.date | ukDate }}</small></li>
+        {% endfor %}
+      </ul>
+      <a href="/safety-notices/">All notices</a>
+    </div>
+    <div class="card">
+      <h2>Latest updates</h2>
+      <ul class="list-clean">
+        {% for item in collections.news | slice(0,3) %}
+        <li><a href="{{ item.url }}">{{ item.data.title }}</a><br><small>{{ item.date | ukDate }}</small></li>
+        {% endfor %}
+      </ul>
+      <a href="/news/">All updates</a>
+    </div>
+    <div class="card">
+      <h2>Service status</h2>
+      <p><strong>Informational only:</strong> All planned digital services remain in preparation. Public information pages are fully available.</p>
+      <p>Telephone enquiries currently averaging less than five minutes wait time.</p>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h2>Safety guidance for citizens and communities</h2>
+    <div class="callout">If you observe unsafe unmanned aircraft activity near emergency operations, aerodromes or public events, report promptly to the Safety Reporting Desk.</div>
+    <div class="grid grid-3">
+      <article class="card"><h3>Quick links</h3><ul><li><a href="/airspace-restricted-areas/">Restricted areas</a></li><li><a href="/operational-authorisations/">Authorisations</a></li><li><a href="/contact/">Contact the UAS Team</a></li></ul></article>
+      <article class="card"><h3>Resources</h3><ul><li><a href="/assets/files/UAS-Community-Guide.pdf">Community drone safety guide (PDF)</a></li><li><a href="/assets/files/UAS-Operator-Checklist.pdf">Pre-flight checklist (PDF)</a></li></ul></article>
+      <article class="card"><h3>Public safety themes</h3><p>Maintain visual line of sight, respect privacy and avoid flying near emergency services, critical sites and controlled airspace unless authorised.</p></article>
+    </div>
+  </div>
+</section>

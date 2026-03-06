@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} | {{ site.shortName }} {{ site.division }}</title>
+  <meta name="description" content="{{ description or site.tagline }}">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script defer src="/assets/js/main.js"></script>
+</head>
+<body>
+  {% include "components/header.njk" %}
+  {% include "components/breadcrumbs.njk" %}
+  <main id="main-content">{{ content | safe }}</main>
+  {% include "components/footer.njk" %}
+</body>
+</html>

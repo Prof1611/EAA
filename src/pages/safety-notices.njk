@@ -1,0 +1,18 @@
+---
+layout: layouts/section.njk
+title: Safety Notices
+summary: Current and archived unmanned aircraft safety notices issued by the EAA.
+permalink: /safety-notices/
+breadcrumbs:
+  - title: Safety Notices
+---
+<p>Safety notices provide timely instructions and advisories for operators and remote pilots. Check this page regularly before undertaking operations.</p>
+<ul class="list-clean">
+{% for notice in collections.notices %}
+  <li class="card">
+    <h3><a href="{{ notice.url }}">{{ notice.data.title }}</a></h3>
+    <p><strong>Reference:</strong> {{ notice.data.reference }}<br><strong>Issued:</strong> <time datetime="{{ notice.date | isoDate }}">{{ notice.date | ukDate }}</time></p>
+    <p>{{ notice.data.summary }}</p>
+  </li>
+{% endfor %}
+</ul>

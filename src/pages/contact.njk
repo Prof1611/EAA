@@ -1,0 +1,27 @@
+---
+layout: layouts/section.njk
+title: Contact
+summary: Contact details for the Endonian Aviation Authority UAS Team and related offices.
+permalink: /contact/
+breadcrumbs:
+  - title: Contact
+---
+<h2>Authority contact</h2>
+<p>{{ contact.hq.name }}<br>{{ contact.hq.address | join('<br>') | safe }}</p>
+<p>Telephone: {{ contact.hq.phone }}<br>Email: <a href="mailto:{{ contact.hq.email }}">{{ contact.hq.email }}</a></p>
+<h2>Department contacts</h2>
+<div class="grid grid-3">
+{% for dept in contact.departments %}
+  <article class="card"><h3>{{ dept.name }}</h3><p>Email: <a href="mailto:{{ dept.email }}">{{ dept.email }}</a><br>Telephone: {{ dept.phone }}</p></article>
+{% endfor %}
+</div>
+<h2>Office hours</h2>
+<p>{{ contact.officeHours }}</p>
+<h2>General enquiry form</h2>
+<form class="form-grid" action="#" method="post">
+  <div><label for="name">Full name</label><input id="name" name="name" type="text"></div>
+  <div><label for="email">Email address</label><input id="email" name="email" type="email"></div>
+  <div><label for="topic">Topic</label><select id="topic" name="topic"><option>General guidance</option><option>Safety reporting</option><option>Media enquiry</option></select></div>
+  <div><label for="message">Message</label><textarea id="message" name="message" rows="5"></textarea></div>
+  <button class="btn btn-primary" type="submit">Submit enquiry (UI only)</button>
+</form>

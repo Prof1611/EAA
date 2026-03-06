@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+---
+{% include "components/page-hero.njk" %}
+<article class="section-content">
+  <div class="container prose">
+    <p class="meta">Published {{ page.date | ukDate }}</p>
+    {{ content | safe }}
+  </div>
+</article>
