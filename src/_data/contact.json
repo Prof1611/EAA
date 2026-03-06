@@ -1,0 +1,26 @@
+{
+  "hq": {
+    "name": "Endonian Aviation Authority Headquarters",
+    "address": ["Civic Aviation House", "14 Meridian Avenue", "Port Alder, Endo EA1 4AA"],
+    "phone": "+355 20 700 4100",
+    "email": "enquiries@eaa-endo.gov"
+  },
+  "departments": [
+    {
+      "name": "UAS Team Public Enquiries",
+      "email": "uas.public@eaa-endo.gov",
+      "phone": "+355 20 700 4125"
+    },
+    {
+      "name": "Safety Reporting Desk",
+      "email": "safety.report@eaa-endo.gov",
+      "phone": "+355 20 700 4180"
+    },
+    {
+      "name": "Media Office",
+      "email": "media@eaa-endo.gov",
+      "phone": "+355 20 700 4199"
+    }
+  ],
+  "officeHours": "Monday to Friday, 08:30 to 17:00 (Endo Standard Time), excluding public holidays"
+}

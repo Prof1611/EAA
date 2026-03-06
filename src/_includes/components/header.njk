@@ -1,0 +1,21 @@
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-top">
+    <div>
+      <p class="eyebrow">{{ site.shortName }} · {{ site.division }}</p>
+      <a href="/" class="brand">{{ site.name }}</a>
+      <p class="tagline">{{ site.tagline }}</p>
+    </div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+  </div>
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <ul>
+        {% for item in navigation %}
+          {% set active = page.url == item.url or (item.url != '/' and page.url.startsWith(item.url)) %}
+          <li><a href="{{ item.url }}" {% if active %}aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</header>

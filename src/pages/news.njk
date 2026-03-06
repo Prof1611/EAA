@@ -1,0 +1,17 @@
+---
+layout: layouts/section.njk
+title: News / Updates
+summary: Latest announcements and service updates from the EAA UAS Team.
+permalink: /news/
+breadcrumbs:
+  - title: News / Updates
+---
+<ul class="list-clean">
+{% for item in collections.news %}
+  <li class="card">
+    <h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+    <p class="meta">{{ item.date | ukDate }}</p>
+    <p>{{ item.data.summary }}</p>
+  </li>
+{% endfor %}
+</ul>
